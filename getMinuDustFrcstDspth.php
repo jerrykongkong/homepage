@@ -32,7 +32,3 @@ curl_close($curl);
 echo $response;
 
 ?>
-
-아래 내용은 getMinuDustWeekFrcstDspth.php 파일 내용입니다
-
-<?php
