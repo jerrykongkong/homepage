@@ -8,7 +8,7 @@ $url = "http://apis.data.go.kr/B552584/ArpltnInforInqireSvc/getCtprvnRltmMesureD
 $returnType = $_GET["returnType"]; // 응답 형식 (예: json, xml)
 $sidoName = urlencode($_GET["sidoName"]); // 시도명 예: 서울	
 $ver = "1.0"; // 버전 1.0으로 고정
-$serviceKey = "자신의 Decoding Key를 넣으세요 ";
+$serviceKey = "ld4ZrFJ2DtzV85lnDWM28ruYwlmzC7lM7LsdcmmPVDiAQG4Z1+eun27KSwpAY6sCp9kKgfFZv9dQ0nFKWHGFkQ== ";
 
 // 파라미터를 URL에 쿼리 스트링으로 추가
 $fullUrl = sprintf("%s?serviceKey=%s&returnType=%s&sidoName=%s&numOfRows=200&pageNo=1&ver=%s", 

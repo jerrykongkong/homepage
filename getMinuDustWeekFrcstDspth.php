@@ -7,7 +7,7 @@ $url = "http://apis.data.go.kr/B552584/ArpltnInforInqireSvc/getMinuDustWeekFrcst
 // 실제 요청에서는 이 값들을 적절한 값으로 교체해야 합니다.
 $returnType = $_GET["returnType"]; // 응답 형식 (예: json, xml)
 $searchDate = $_GET["searchDate"]; // 검색할 날짜 2024-03-27
-$serviceKey = "자신의 Decoding Key를 넣으세요";
+$serviceKey = "ld4ZrFJ2DtzV85lnDWM28ruYwlmzC7lM7LsdcmmPVDiAQG4Z1+eun27KSwpAY6sCp9kKgfFZv9dQ0nFKWHGFkQ==";
 
 // 파라미터를 URL에 쿼리 스트링으로 추가
 $fullUrl = sprintf("%s?returnType=%s&searchDate=%s&numOfRows=200&pageNo=1&serviceKey=%s", 
