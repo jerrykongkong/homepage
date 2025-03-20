@@ -1,0 +1,109 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "대기오염정보 조회",
+    "description": "",
+    "version": "v1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://zooo.kr"
+    }
+  ],
+  "paths": {
+    "/getMinuDustFrcstDspth.php": {
+      "get": {
+        "operationId": "getMinuDustFrcstDspth",
+        "description": "대기질 예보통보조회",
+        "parameters": [
+          {
+            "name": "returnType",
+            "in": "query",
+            "description": "데이터 표출 방식 (xml 또는 json)",
+            "default": "json",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "searchDate",
+            "in": "query",
+            "description": "통보시간 검색(공백으로 넣으며, 한달 동안의 예보통보 발령 날짜 리스트 정보 확인, (형식: YYYY-MM-DD, 예:2024-03-26)",
+            "default": "",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "InformCode",
+            "in": "query",
+            "description": "받을 정보의 종류를 나타내는 통보 코드 (PM10, PM25, O3 중 하나로, PM10과 PM25는 미세먼지 종류를 뜻하고 O3는 오존을 뜻함)",
+            "default": "",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/getMinuDustWeekFrcstDspth.php": {
+      "get": {
+        "operationId": "getMinuDustWeekFrcstDspth",
+        "description": "초미세먼지 주간예보 조회 - 통보코드와 통보시간으로 대기질 전망과 주간예보 정보를 조회하는 초미세먼지 주간예보통보 조회",
+        "parameters": [
+          {
+            "name": "returnType",
+            "in": "query",
+            "description": "데이터 표출 방식 (xml 또는 json)",
+            "default": "json",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "searchDate",
+            "in": "query",
+            "description": "통보시간 검색(공백으로 넣으며, 한달 동안의 예보통보 발령 날짜 리스트 정보 확인, (형식: YYYY-MM-DD, 예:2024-03-26)",
+            "default": "",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/getCtprvnRltmMesureDnsty.php": {
+      "get": {
+        "operationId": "getCtprvnRltmMesureDnsty",
+        "description": "시도명을 검색조건으로 하여 시도별 측정소목록에 대한 일반 항목과 CAI최종 실시간 측정값과 지수 정보 조회 기능을 제공하는 시도별 실시간 측정정보 조회",
+        "parameters": [
+          {
+            "name": "returnType",
+            "in": "query",
+            "description": "데이터 표출 방식 (xml 또는 json)",
+            "default": "json",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "sidoName",
+            "in": "query",
+            "description": "시도명 (예: 서울)",
+            "default": "",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    }
+  }
+}
